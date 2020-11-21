@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row'
 // class TodoItem extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -42,21 +46,33 @@ import React, { Component } from 'react';
 //     )
 //   }
 // }
+class AltQueue extends React.Component {
+  render() {
+    return (
+      <Card bg ='primary'>
+        <Card.Header >Queue</Card.Header>
+        <ListGroup className="lg" variant="flush" >
+          <ListGroup.Item >Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+        </ListGroup>
+      </Card>
+    )
+  }
+
+}
 
 class Queues extends React.Component {
 
   render() {
     return (
-      <div>
-        <table>
-          <tr>
-            <th className='c1'>Queue</th>
-            <th className='c2'>In Progress</th>
-            <th className='c3'>Completed</th>
-          </tr>
-          <tbody></tbody>
-        </table>
-      </div>
+      <Container> 
+        <Row>
+          <AltQueue/>
+          <AltQueue/>
+          <AltQueue/>
+        </Row>
+      </Container>
     )
   }
 }
